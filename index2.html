@@ -5,57 +5,232 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        .lista {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .item {
+            display: inline-block;
+        }
+
+        a {
+            transition: 0.4s;
+        }
+
+        a:hover {
+            color: peru;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .input_text {
+            transition: 0.4s;
+
+        }
+
+        .input_text:focus {
+            border: 3px solid red;
+            outline: none;
+            color: #2b669a;
+            font-weight: bold;
+            font-size: 2rem;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #fe466d;
+            border: 2px solid white;
+            color: white;
+            border-radius: 7px;
+            padding: 1rem 2rem;
+            font-size: 2rem;
+            transition: .2s;
+        }
+
+        button:hover {
+            background: white;
+            border: 2px solid #fe466d;
+            color: #fe466d;
+
+        }
+
+        .avatar {
+            width: 20%;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            background: peru;
+
+        }
+
+        .hijo {
+            width: 30%;
+        }
+        .avatar2{
+            width: 100%;
+            transition: 0.3s;
+            /*-webkit-filter:blur(8px);*/
+        }
+        .avatar2:hover{
+            opacity: 0.2;
+        }
+
+    </style>
 </head>
 <body>
+<div class="col-md-12"style="background: skyblue; height: 100vh;position: relative">
+    <div style="position: absolute;bottom: 4rem;left: 0;right: 0;text-align: center">
+        <button>Registrate</button>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-6">
-            <figure>
-                <img src="edf" alt="">
-            </figure>
-        </div>
-        <div class="col-xs-6 text-right">
-            <input type="text" value="valor">
-        </div>
 
-
-        <div class="col-xs-12 text-center">
-            <h2>nombre</h2>
-            <figure>
-                <img src="df" alt="">
-            </figure>
-            <a href="">F</a>
-        </div>
-
-
-
-        <section class="container">
-            <div class="col-xs-12">
-                <div class="col-xs-3">
-                    <figure>
-                        <img src="sd" alt="">
-                    </figure>
-                </div>
-                <div class="col-xs-9">
-                    <h2>titulo</h2>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus consectetur debitis earum eius
-                        mollitia numquam odio omnis, porro similique tenetur vel voluptates voluptatum. Accusamus minus
-                        officia porro recusandae voluptates.
-                    </p>
+        <div class="col-md-12">
+            <div class="col-md-6" style="background: red">
+                <figure>
+                    <img class="img" src="img/1.jpg" alt="">
+                </figure>
+            </div>
+            <div class="col-md-6 text-right">
+                <nav>
+                    <ul class="lista">
+                        <li class="item">
+                            <a href="">Shopping cart |</a>
+                        </li>
+                        <li class="item">
+                            <a href="">
+                                Login |
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="">
+                                Sign up
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <input class="input_text" type="text">
+                    <button>Enviar</button>
+                    <button>Registrar</button>
                 </div>
             </div>
-
-
+        </div>
+        <section class="col-md-12 flex">
+            <div class="hijo text-center">
+                <h2>Washaberto</h2>
+                <figure>
+                    <img class="avatar" src="img/2.jpg" alt="">
+                </figure>
+                <a href="">
+                <span class="glyphicon glyphicon-picture">
+                </span>
+                </a>
+                <a href="">
+                <span class="glyphicon glyphicon-picture">
+                </span>
+                </a>
+                <a href="">
+                <span class="glyphicon glyphicon-picture">
+                </span>
+                </a>
+                <a href="">
+                <span class="glyphicon glyphicon-picture">
+                </span>
+                </a>
+            </div>
         </section>
 
+        <div class="col-md-12" style="padding: 5rem 7rem">
+            <div class="col-md-3">
+                <figure>
+                    <img class="avatar2" src="img/2.jpg" alt="">
+                </figure>
+            </div>
+            <div class="col-md-9">
+                <h3>
+                    titulo
+                </h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam aut autem consequatur cumque
+                    doloribus eligendi enim et facilis hic incidunt, ipsam magni odit perspiciatis quibusdam quod, rem
+                    suscipit temporibus.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body ">
+                            <figure>
+                                <img class="avatar2" src="img/2.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <input type="text">
+            <button>Enviar</button>
+        </div>
+
     </div>
-
-
-
 </div>
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
